@@ -10,17 +10,17 @@ afterEach(cleanup)
 
 describe('Gallery component', () => {
 
-    it('renders', () => {
-        render(<Gallery currentCategory={portrait} />);
-    });
+  it('renders', () => {
+    render(<Gallery currentCategory={portrait} />);
+  });
 
-    it('matches snapshot', () => {
-        const { asFragment } = render(<Gallery currentCategory={portrait} />)
-        expect(asFragment()).toMatchSnapshot()
-    })
+  it('matches snapshot', () => {
+    const { asFragment } = render(<Gallery currentCategory={portrait} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 });
 
 it('displays text', () => {
-    const { getByTestId } = render(<Gallery currentCategory={portrait} />)
-    expect(getByTestId('h1tag')).toHaveTextContent('Portraits')
+  const { getByTestId } = render(<Gallery currentCategory={portrait} />)
+  expect(getByTestId('h1tag')).toHaveTextContent('Portraits')
 })
